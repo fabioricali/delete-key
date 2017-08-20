@@ -37,7 +37,7 @@ console.log(result); //=> {a: 4, d: {}};
 ```
 
 ## Changelog
-You can view the changelog <a target="_blank" href="https://github.com/fabioricali/defaulty/blob/master/CHANGELOG.md">here</a>
+You can view the changelog <a target="_blank" href="https://github.com/fabioricali/delete-key/blob/master/CHANGELOG.md">here</a>
 
 ## License
 delete-key is open-sourced software licensed under the <a target="_blank" href="http://opensource.org/licenses/MIT">MIT license</a>
