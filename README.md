@@ -12,7 +12,7 @@ Deletes keys of an object.
 
 ### Node.js
 ```
-npm install defaulty --save
+npm install delete-key --save
 ```
 
 ## Example
