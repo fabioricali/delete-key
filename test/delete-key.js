@@ -10,6 +10,15 @@ describe('delete-key', function () {
             be.err.equal(result, {a: 4});
         });
 
+        it('copy, should be return true', () => {
+            const targetObject = {a: 4, b: 5};
+            let newTargetObject = deleteKey.copy(targetObject, ['b']);
+            console.log(targetObject);
+            console.log(newTargetObject);
+            be.err.equal(targetObject, {a: 4, b: 5});
+            be.err.equal(newTargetObject, {a: 4});
+        });
+
         it('undefined key, should be return true', () => {
             let result = deleteKey({a: 4, b: 5}, ['z']);
             console.log(result);

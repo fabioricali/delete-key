@@ -22,18 +22,28 @@ const deleteKey = require('delete-key');
 
 const targetObj = {a: 4, b: 5, d: {a: 1}};
 
-const result = deleteKey(targetObj, ['b, d']);
+deleteKey(targetObj, ['b, d']);
 
-console.log(result); //=> {a: 4};
+console.log(targetObj); //=> {a: 4};
 ```
 
 ### Deletes recursively
 ```javascript
 const targetObj = {a: 4, b: 5, d: {a: 1}};
 
-const result = deleteKey(targetObj, ['b, a'], true);
+deleteKey(targetObj, ['b, a'], true);
 
-console.log(result); //=> {a: 4, d: {}};
+console.log(targetObj); //=> {a: 4, d: {}};
+```
+
+### Copy target object
+```javascript
+const targetObj = {a: 4, b: 5, d: {a: 1}};
+
+const newTargetObject = deleteKey.copy(targetObj, ['b, a'], true);
+
+console.log(targetObj); //=> {a: 4, b: 5, d: {a: 1}};
+console.log(newTargetObject); //=> {a: 4, d: {}};
 ```
 
 ## Changelog
